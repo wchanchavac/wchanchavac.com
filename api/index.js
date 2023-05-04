@@ -1,8 +1,8 @@
 "use-strict";
 
 export default function handler(request, response) {
+  console.log(request);
   const [subdomain] = request.subdomains;
-  console.log(subdomain);
   if (subdomain == "meet") {
     return response.redirect(process.env.MEET_URL);
   }
